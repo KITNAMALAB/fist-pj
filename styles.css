@@ -167,3 +167,108 @@ img{max-width:100%;height:auto;}
 .container,.hero-content,.top-info-panel,.section>.container{width:min(100%,100vw);max-width:100%;padding-left:14px;padding-right:14px;}
 .site-header,.hero,.top-info-panel{overflow:hidden;}
 }
+
+/* Ver1.02 definitive smartphone layout fix */
+@media (max-width: 620px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  body, main, header, section, article, figure, div, nav {
+    min-width: 0;
+  }
+
+  .hero-content,
+  .top-info-panel,
+  .section {
+    width: calc(100% - 24px);
+    max-width: calc(100% - 24px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .top-info-panel {
+    padding: 10px;
+  }
+
+  .speaker-summary,
+  .event-card,
+  .event-details,
+  .entry-row,
+  .section-copy,
+  .concept-card,
+  .concept-card figcaption {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .event-heading,
+  .event-detail-row,
+  .entry-row {
+    min-width: 0;
+  }
+
+  .primary-button,
+  .profile-button,
+  .secondary-button {
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .primary-button {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .section-intro {
+    display: block;
+  }
+
+  .section-copy {
+    margin-bottom: 28px;
+  }
+
+  .about-title span,
+  .concept-card strong span,
+  .concept-card strong .icu-acronym {
+    display: inline;
+    width: auto;
+    max-width: 100%;
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .about-title {
+    font-size: clamp(24px, 7.2vw, 31px);
+    line-height: 1.5;
+  }
+
+  .concept-card figcaption {
+    padding: 22px 18px;
+  }
+
+  .concept-card strong {
+    display: block;
+    font-size: 19px;
+    overflow-wrap: anywhere;
+  }
+
+  .points li {
+    overflow-wrap: anywhere;
+  }
+}
