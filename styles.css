@@ -346,3 +346,65 @@ img{max-width:100%;height:auto;}
     margin-top: 1px;
   }
 }
+
+
+/* Ver1.06: keep all three lecture times on one line on narrow phones */
+@media (max-width: 620px) {
+  .event-details {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .event-datetime .event-value {
+    width: 100%;
+    max-width: 100%;
+    overflow: visible;
+  }
+
+  .event-datetime .event-session {
+    display: block;
+    width: max-content;
+    max-width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+    white-space: nowrap !important;
+    overflow-wrap: normal !important;
+    word-break: keep-all !important;
+    font-size: clamp(10.5px, 3.35vw, 13px) !important;
+    line-height: 1.55;
+    letter-spacing: -0.025em;
+  }
+}
+
+
+/* Ver1.07: definitive single-line lecture times + mobile cache refresh */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+@media (max-width: 620px) {
+  .event-card {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .event-details {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  .event-datetime .event-session {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+    font-size: clamp(11px, 3.2vw, 13px) !important;
+    line-height: 1.6;
+    letter-spacing: -0.035em;
+    font-variant-numeric: tabular-nums;
+  }
+}
