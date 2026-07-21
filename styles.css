@@ -317,3 +317,32 @@ img{max-width:100%;height:auto;}
     white-space: nowrap;
   }
 }
+
+
+/* Ver1.05 mobile lecture information alignment */
+@media (max-width: 620px) {
+  .event-datetime {
+    display: block;
+  }
+
+  .event-datetime .event-label {
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .event-datetime .event-value {
+    width: 100%;
+  }
+
+  .event-session {
+    padding-left: 0;
+    white-space: nowrap;
+    font-size: clamp(13px, 3.75vw, 15px) !important;
+    letter-spacing: -0.01em;
+  }
+
+  .event-fee .fee-note {
+    display: inline-block;
+    margin-top: 1px;
+  }
+}
